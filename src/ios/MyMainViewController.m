@@ -9,6 +9,7 @@
 #import "CDVWebViewUIDelegate.h"
 #import "ReroutingUIWebView.h"
 #import "AppDelegate+WKWebViewPolyfill.h"
+#import "WKWebViewGetUserMediaShim.h"
 
 @interface CDVViewController ()
 @property (nonatomic, readwrite, retain) NSArray *startupPluginNames;
