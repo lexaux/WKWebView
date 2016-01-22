@@ -111,6 +111,8 @@
   webViewBounds.origin = self.view.bounds.origin;
 
   self.wkWebView = [self newCordovaWKWebViewWithFrame:webViewBounds wkWebViewConfig:config];
+  WKWebViewGetUserMediaShim* shim = [[WKWebViewGetUserMediaShim alloc]initWithWebView:self.wkWebView contentController:config.userContentController];
+
   self.wkWebView.autoresizingMask = (UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight);
 
 /*

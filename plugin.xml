@@ -29,8 +29,12 @@
   <platform name="ios">
 
     <js-module src="www/wkwebview.js" name="wkwebview">
-        <clobbers target="wkwebview" />
+      <clobbers target="wkwebview" />
     </js-module>
+    <js-module src="www/WKWebViewGetUserMediaShim.js" name="wkwebviewGetUserMediaShim">
+      <runs/>
+    </js-module>
+
 
     <config-file target="config.xml" parent="/*">
       <feature name="WKWebViewPolyfill">
@@ -71,7 +75,10 @@
     <source-file src="src/ios/CDVWebViewOperationsDelegate.m"/>
     <header-file src="src/ios/CDVWebViewUIDelegate.h"/>
     <source-file src="src/ios/CDVWebViewUIDelegate.m"/>
-    
+
+    <header-file src="src/ios/WKWebViewGetUserMediaShim.h"/>
+    <source-file src="src/ios/WKWebViewGetUserMediaShim.m"/>
+
     <dependency id="cordova-plugin-webserver" />
 
   </platform>
