@@ -59,6 +59,7 @@
 
     <!-- For WKWebView -->
     <framework src="WebKit.framework" />
+    <framework src="AudiotToolbox.framework" />
 
     <!-- the controller loading the WKWebView -->
     <header-file src="src/ios/MyMainViewController.h"/>
